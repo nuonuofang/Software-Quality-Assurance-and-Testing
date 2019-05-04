@@ -1,4 +1,3 @@
-package change;
 
  
 /**
@@ -12,13 +11,15 @@ public class StudentPanel extends JPanel{
 	JLabel nolabel;       //学号标签
 	JLabel namelabel;     //姓名标签
 	JLabel genderlabel;   //性别标签
-	JLabel birthlabel;    //出生年月标签	
+	JLabel birthlabel;    //出生年月标签
+	JLabel addresslabel;  //家庭住址标签
 	JLabel tellabel;      //电话标签
 	
 	JTextField nofield;     //学号输入框
 	JTextField namefield;   //姓名输入框
 	JTextField genderfield; //性别输入框
-	JTextField birthfield;  //出生年月输入框	
+	JTextField birthfield;  //出生年月输入框
+	JTextField addressfield;//家庭住址输入框
 	JTextField telfield;    //电话输入框
 	
 	public StudentPanel(){
@@ -36,6 +37,8 @@ public class StudentPanel extends JPanel{
 		genderfield = new JTextField(10);
 		birthlabel = new JLabel("出生年月");
 		birthfield = new JTextField(10);
+		addresslabel = new JLabel("家庭住址");
+		addressfield = new JTextField(10);
 		tellabel = new JLabel("联系电话");
 		telfield = new JTextField(10);
 		
@@ -49,6 +52,8 @@ public class StudentPanel extends JPanel{
 		this.add(genderfield);
 		this.add(birthlabel);
 		this.add(birthfield);
+		this.add(addresslabel);
+		this.add(addressfield);
 		this.add(tellabel);
 		this.add(telfield);
 		this.setVisible(true);
@@ -62,6 +67,7 @@ public class StudentPanel extends JPanel{
 		namefield.setText("");
 		genderfield.setText("");
 		birthfield.setText("");
+		addressfield.setText("");
 		telfield.setText("");
 	}
 	
@@ -78,7 +84,9 @@ public class StudentPanel extends JPanel{
 	public void setBirth(String n){
 		birthfield.setText(n);
 	}
-
+	public void setAddress(String n){
+		addressfield.setText(n);
+	}
 	public void setTel(String n){
 		telfield.setText(n);
 	}
@@ -96,7 +104,9 @@ public class StudentPanel extends JPanel{
 	public String getBirth(){
 		return birthfield.getText();
 	}
-
+	public String getAddress(){
+		return addressfield.getText();
+	}
 	public String getTel(){
 		return telfield.getText();
 	}
